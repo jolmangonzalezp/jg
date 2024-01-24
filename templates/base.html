@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Jolman Gonz&aacute;lez - {% block title %} {%endblock%}</title>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="{{ url_for('home')}}"><img src="{{ url_for('static', filename='img/jg_dev.svg') }}" alt=""></a></div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="{{ url_for('home')}}">Inicio</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('services')}}">Servicios</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('about')}}">Acerca de mi</a>
+                </li>
+                <li><a href="{{ url_for('contact')}}">Contacto</a></li>
+                <li>
+                    <a href="{{ url_for('blog')}}">Blog</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    {% block content%} {%endblock%}
+</body>
+</html>
