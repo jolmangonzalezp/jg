@@ -1,32 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es_CO">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Jolman Gonz&aacute;lez - {% block title %} {%endblock%}</title>
 </head>
 <body>
     <header>
         <div class="logo"><a href="{{ url_for('home')}}"><img src="{{ url_for('static', filename='img/jg_dev.svg') }}" alt=""></a></div>
-        <nav>
+        <nav id="menu">
             <ul>
-                <li>
+                <li id="menu-item">
                     <a href="{{ url_for('home')}}">Inicio</a>
                 </li>
-                <li>
+                <li id="menu-item">
                     <a href="{{ url_for('services')}}">Servicios</a>
                 </li>
-                <li>
+                <li id="menu-item">
                     <a href="{{ url_for('about')}}">Acerca de mi</a>
                 </li>
-                <li><a href="{{ url_for('contact')}}">Contacto</a></li>
-                <li>
+                <li id="menu-item">
+                    <a href="{{ url_for('contact')}}">Contacto</a>
+                </li>
+                <li id="menu-item">
                     <a href="{{ url_for('blog')}}">Blog</a>
                 </li>
             </ul>
         </nav>
     </header>
     {% block content%} {%endblock%}
+
+    <footer>
+        <div class="social">
+            <div class="social-icon fb">
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+            </div>
+            <div class="social-icon ig">
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <div class="social-icon wa">
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="social-icon in">
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+            <div class="social-icon gh">
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+        <div class="copy">
+            <small>
+                &copy; 2024 | Todos los derechos reservados.
+            </small>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static' , filename='js/main.js')}}"></script>
 </body>
 </html>
