@@ -337,7 +337,7 @@ main .about .about_content .about_content_img img {
   border-radius: 100%;
 }
 main .about .skills {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.8);
   padding: 20px;
   width: 100%;
   display: flex;
